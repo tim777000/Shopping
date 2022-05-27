@@ -14,12 +14,12 @@ docker build -t shopping .
 ```bash=
 docker run -d --name shopping -p 8888:8888 shopping
 ```
-* server運作於==localhost:8888== ，在瀏覽器輸入==localhost:8888/swagger==可進入類似postman可輕鬆執行API的介面
+* server運作於localhost:8888 ，在瀏覽器輸入localhost:8888/swagger可進入類似postman可輕鬆執行API的介面
 ### Product API
 Product共有兩個API，分別為View以及Add，View可觀看目前所有商品，Add可添加新商品或增加既有商品的存貨量，或修改既有商品價格
 #### 用法
-* ==localhost:8888/Product/View==
-* ==localhost:8888/Product/Add==，加上Post Data
+* localhost:8888/Product/View
+* localhost:8888/Product/Add，加上Post Data
 ```json=
 {
     "Name":"XXX",
@@ -34,8 +34,8 @@ Cart共有三個API，此API有user區別，三API分別為View、Add以及Check
 注意，重複Checkout會覆蓋舊訂單
 :::
 #### 用法
-* ==localhost:8888/{Name}/Cart/View==
-* ==localhost:8888/{Name}/Cart/Add==，加上Post Data
+* localhost:8888/{Name}/Cart/View
+* localhost:8888/{Name}/Cart/Add，加上Post Data
 ```json=
 {
     "Name":"XXX",
@@ -43,9 +43,9 @@ Cart共有三個API，此API有user區別，三API分別為View、Add以及Check
     "Amount": X
 }
 ```
-* ==localhost:8888/{Name}/Cart/Checkout==
+* localhost:8888/{Name}/Cart/Checkout
 
 ### Order API
 Order僅有一支API，此API有user區別，API為View，可觀看user最近的訂單(以下{Name}請自行替換程使用者名稱)
 #### 用法
-* ==localhost:8888/{Name}/Order/View==
+* localhost:8888/{Name}/Order/View
